@@ -29,8 +29,6 @@ export default ({ data }) => (
     <div>
       <h1> Haohang Li&#39;s stuff</h1>
     </div>
-    <h1>Hi people</h1>
-
 
   </Layout>
 );

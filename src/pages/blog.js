@@ -10,7 +10,7 @@ const BlogPage = () => (
     <SEO title="Page two" />
     <h1>Hi from the second page</h1>
     <p>
-      Welcome to Bolg
+      Welcome to Blog
     </p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>

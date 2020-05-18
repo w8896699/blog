@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 // import Image from "../components/image"
 import SEO from '../components/seo';
+import HomepageFirstHero from '../components/homepageComponent/homepageFirstHero';
+import HomepageBanner from '../components/homepageComponent/homepageBanner';
 
 
 const BlogLink = styled(Link)`
@@ -22,13 +24,26 @@ const BlogTitle = styled.h3`
   }
 `;
 
+const StyledLinks = styled(Link)`
+  margin: 10px;
+  width: 20%;
+`;
 
+const StyledLinkContainer = styled.div`
+  display:flex;
+  justify-content: space-around
+`;
 export default ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <div>
-      <h1> Haohang Li&#39;s stuff</h1>
-    </div>
+    <HomepageFirstHero>
+      <HomepageBanner title="This Billy's Everything " info="Let me show You more of Myself if you are my">
+        <StyledLinkContainer>
+          <StyledLinks to="/blog/" className="btn-white"> Friend</StyledLinks>
+          <StyledLinks to="/blog/" className="btn-white"> Colleague</StyledLinks>
+        </StyledLinkContainer>
+      </HomepageBanner>
+    </HomepageFirstHero>
 
   </Layout>
 );

@@ -2,7 +2,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { IoIosOptions } from 'react-icons/io';
 import links from '../constants/links';
@@ -11,6 +10,7 @@ import Logo from '../images/logo/logo.svg';
 
 // 992px 以上就切用这个
 const StyledNavCenter = styled.div` 
+
  @media screen and (min-width: 992px) { 
       max-width: 1170px;
       margin: 0 auto;
@@ -104,7 +104,7 @@ const StyledNavSocialLink = styled.a`
 `;
 
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [isNavOpen, setNavIcon] = useState(false);
   const toggleNav = () => {
     setNavIcon(!isNavOpen);
@@ -114,6 +114,7 @@ const Header = ({ siteTitle }) => {
       <StyledNavCenter>
         <StyledNavBarHeader>
           <StyledImgLogo src={Logo} alt="blog logo" />
+          {/* <h4>{siteTitle}</h4> */}
           <StyledMenueBtn type="button" onClick={toggleNav}>
             <StyledMenueIcon />
           </StyledMenueBtn>
@@ -145,13 +146,5 @@ const Header = ({ siteTitle }) => {
   );
 };
 
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Header;

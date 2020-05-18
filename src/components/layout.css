@@ -18,11 +18,11 @@ font-family: 'Lato', sans-serif; */
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-html {
+/* html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
+} */
 
 body {
   font-family: "Indie Flower";
@@ -30,6 +30,7 @@ body {
   background: var(--mainWhite);
   line-height: 1.4;
   font-size: 1rem;
+  margin: 0px;
 }
 
 h1,
@@ -59,7 +60,7 @@ a {
   text-decoration: none;
 }
 .defaultHero {
-  min-height: calc(100vh - 62px);
+  min-height: calc(100vh - 86px);
   background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/backgrounds/homePageBG.jpg") center/cover no-repeat;
   display: flex;
@@ -68,6 +69,7 @@ a {
 }
 .btn-white,
 .btn-primary {
+  font-family:'Patrick Hand';
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);

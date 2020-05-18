@@ -5,24 +5,25 @@
  */
 
 // You can delete this file if you're not using it
-const {createFilePath} = require(`gatsby-source-filesystem`)
-const path = require('path')
-exports.onCreateNode = ({node, actions, getNode}) => {
-    const { createNodeField} = actions
-    if(node.internal.type === `MarkdownRemark`){
-        const slug = createFilePath({node, getNode})
+const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require('path');
 
-        createNodeField({
-            node,
-            name:`slug`,
-            value: slug //markdown的地址
-        })
-    }
-}
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode });
+
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug, // markdown的地址
+    });
+  }
+};
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
-    return graphql(`
+  const { createPage } = actions;
+  return graphql(`
       {
         allMarkdownRemark {
           edges {
@@ -34,15 +35,15 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => { //loop through every file we have and manually create new page using template
-        createPage({
-          path: node.fields.slug,//use slug as path
-          component: path.resolve(`./src/template/blog-post.js`),
-          context: {
-            slug: node.fields.slug,
-          },
-        })
-      })
-    })
-  }
+    `).then((result) => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => { // loop through every file we have and manually create new page using template
+      createPage({
+        path: node.fields.slug, // use slug as path
+        component: path.resolve(`./src/template/blog-post.js`),
+        context: {
+          slug: node.fields.slug,
+        },
+      });
+    });
+  });
+};

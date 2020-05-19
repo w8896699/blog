@@ -7,11 +7,20 @@ import { IoIosOptions } from 'react-icons/io';
 import links from '../constants/links';
 import socialIcons from '../constants/social-icons';
 import Logo from '../images/logo/logo.svg';
+// 如果缩小了, nav和body之间有一处空白,我不知道到底是咋回事
 
-// 992px 以上就切用这个
+
+const StyledNav = styled.nav`
+  @media screen and (min-width: 992px) {
+    height: 72px; 
+    }
+    background-color:var(--mainWhite);
+`;
+// 992px 以上就切用这个, 这里可能不太对
 const StyledNavCenter = styled.div` 
-
- @media screen and (min-width: 992px) { 
+margin: 0px;
+ @media screen and (min-width: 992px) {
+      height:86px;
       max-width: 1170px;
       margin: 0 auto;
       display: flex;
@@ -57,7 +66,7 @@ const StyledImgLogo = styled.img`
 const StyledNavLinks = styled.ul`
     list-style-type: none;
     transition: var(--mainTransition);
-    height: ${(props) => (!props.toggle ? '0' : '216px')};
+    height: ${(props) => (!props.toggle ? '0' : '146px')};
     overflow: hidden;
     @media screen and (min-width: 992px) {
       height: auto;
@@ -110,7 +119,7 @@ const Header = () => {
     setNavIcon(!isNavOpen);
   };
   return (
-    <nav>
+    <StyledNav>
       <StyledNavCenter>
         <StyledNavBarHeader>
           <StyledImgLogo src={Logo} alt="blog logo" />
@@ -142,7 +151,7 @@ const Header = () => {
           }
         </StyledSocialLinkContainer>
       </StyledNavCenter>
-    </nav>
+    </StyledNav>
   );
 };
 

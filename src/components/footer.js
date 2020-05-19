@@ -11,7 +11,6 @@ const StyledFooter = styled.footer`
     padding: 2rem;
     text-align: center;
     color: var(--mainWhite);
-
 `;
 
 // const StyledNavLinks = styled.div`

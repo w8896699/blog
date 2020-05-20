@@ -59,14 +59,14 @@ p {
 a {
   text-decoration: none;
 }
-.defaultHero {
-  min-height: calc(100vh - 86px);
+/* .defaultHero {
+  min-height: calc(100vh - 72px);
   background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/backgrounds/homePageBG.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 .btn-white,
 .btn-primary {
   font-family:'Patrick Hand';
@@ -97,7 +97,8 @@ a {
   box-shadow: var(--lightShadow);
 } */
 main {
-  min-height: 100vh;
+  min-height: 100vh; 
+  /* min-height: auto;  */
   display: flex;
   flex-direction: column;
 }

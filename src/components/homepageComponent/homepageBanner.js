@@ -15,13 +15,13 @@ const StyledTitle = styled.h1`
   }
 `;
 
-const StyledInfo = styled.p`
+export const StyledInfo = styled.p`
  font-family:'Patrick Hand';
   width: 85%;
   text-transform: capitalize;
   margin: 0 auto;
   margin-bottom: 2rem;
-  letter-spacing: 3px
+  letter-spacing: 3px;
 `;
 
 const HomepageBanner = ({ title, info, children }) => (

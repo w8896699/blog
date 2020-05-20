@@ -1,0 +1,66 @@
+import React from 'react';
+import styled from 'styled-components';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+
+import HomepageBanner from './homepageBanner';
+import StyledHero from '../StyledHero';
+
+const query = graphql`
+  query {
+    file(relativePath: { eq: "backgrounds/homePageBG.jpg" }) {
+      childImageSharp {
+        fluid(quality:90, maxWidth:4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
+const FirstHomePgHero = styled(StyledHero)`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+`;
+const StyledLinks = styled(Link)`
+  margin: 10px;
+  width: 20%;
+  @media screen and (max-width: 567px) {
+    font-size: 0.7rem;
+    font-weight:bolder;
+    }
+`;
+
+const StyledLinkContainer = styled.div`
+  display:flex;
+  justify-content: space-around;
+  @media screen and (max-width: 567px) {
+    display:flex;
+    justify-content: space-between;
+    }
+  
+`;
+
+// TODO SCROLL EFFECT : https://scotch.io/tutorials/implementing-smooth-scrolling-in-react
+//  https://www.youtube.com/watch?v=7f0QXAgFtrE
+
+const FirstHomePage = () => {
+  const { file } = useStaticQuery(query);
+  return (
+    <FirstHomePgHero
+      home="true"
+      img={file.childImageSharp.fluid}
+      height="calc(100vh - 72px)"
+      radius="linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))"
+    >
+      <HomepageBanner title="This Billy's Everything " info="Let me show You more of Myself if you are my">
+        <StyledLinkContainer>
+          <StyledLinks to="#professional" className="btn-white"> Friend</StyledLinks>
+          <StyledLinks to="/blog/" className="btn-white"> Colleague</StyledLinks>
+        </StyledLinkContainer>
+      </HomepageBanner>
+    </FirstHomePgHero>
+  );
+};
+
+
+export default FirstHomePage;

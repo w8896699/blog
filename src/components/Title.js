@@ -17,11 +17,12 @@ text-align:center;
 letter-spacing: 7px;
 @media screen and (max-width: 567px) {
             margin:0 0.35rem;
+            font-size:1.5rem;
     }
 
 `;
 const StyledSubtitle = styled(StyledInfo)`
-  color: ghostwhite;
+  color: white;
 `;
 
 
@@ -43,7 +44,6 @@ const Title = ({ SectionNumber, title, subtitle }) => (
       <StyledTitle>{title}</StyledTitle>
     </StyledTitleWrapper>
     <StyledSubtitle>{subtitle}</StyledSubtitle>
-
   </StyledDiv>
 );
 

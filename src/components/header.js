@@ -11,12 +11,13 @@ import Logo from '../images/logo/logo.svg';
 
 
 const StyledNav = styled.nav`
+   
   @media screen and (min-width: 992px) {
     height: 72px; 
     }
     background-color:var(--mainWhite);
 `;
-// 992px 以上就切用这个, 这里可能不太对
+// 992px 以上就切用这个
 const StyledNavCenter = styled.div` 
 margin: 0px;
  @media screen and (min-width: 992px) {

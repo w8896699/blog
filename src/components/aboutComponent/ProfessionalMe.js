@@ -26,6 +26,7 @@ const StyledSection = styled.section`
 
 const StyledStyledHero = styled(StyledHero)`
   display:block;
+  
 `;
 
 const StyledDiv = styled.div`
@@ -62,7 +63,7 @@ const ProfessionalMe = () => {
   return (
     <StyledSection id="professional">
       <StyledStyledHero img={file.childImageSharp.fluid} radius="linear-gradient(rgba(38, 47, 47, 0.7), rgba(21, 22, 23, 0.7))">
-        This is about page'
+        T
         <Title SectionNumber="01" title="Professional" subtitle=" My Technical skills and Experienced development tools" />
         <StyledDiv>
           <StyledListContainer>

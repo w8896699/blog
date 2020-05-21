@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 // import Image from "../components/image"
 import SEO from '../components/seo';
 import FirstHomePage from '../components/homepageComponent/FirstHomePage';
-// import HomepageBanner from '../components/homepageComponent/homepageBanner';
+import ExperiencePage from '../components/roadComponent/index';
 import ProfessionalMe from '../components/aboutComponent/ProfessionalMe';
 
 
@@ -39,6 +39,7 @@ export default ({ data }) => (
     <SEO title="Home" />
     <FirstHomePage />
     <ProfessionalMe />
+    <ExperiencePage />
 
   </Layout>
 );

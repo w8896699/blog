@@ -9,15 +9,15 @@ export default [
     skill: 'Skilled with HTML, CSS  ',
   },
   {
-    skill: 'Comfortable with relational and non-relational DB',
+    skill: 'Experienced relational and non-relational DataBase',
   },
   {
     skill: 'Have experience in OpenShift and have passion to learn more',
   },
   {
-    skill: 'Servers/cluster setup adn management',
+    skill: 'Servers/cluster setup and management',
   },
   {
-    skill: 'Worked in agile work environment',
+    skill: 'Comfortable in agile work environment',
   },
 ];

@@ -11,7 +11,7 @@ import Logo from '../images/logo/logo.svg';
 
 
 const StyledNav = styled.nav`
-   
+
   @media screen and (min-width: 992px) {
     height: 72px; 
     }
@@ -20,6 +20,9 @@ const StyledNav = styled.nav`
 // 992px 以上就切用这个
 const StyledNavCenter = styled.div` 
 margin: 0px;
+position: -webkit-sticky;
+position: sticky;
+
  @media screen and (min-width: 992px) {
       height:86px;
       max-width: 1170px;

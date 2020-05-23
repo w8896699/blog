@@ -60,19 +60,19 @@ const StyledSkill = styled.li`
 const ProfessionalMe = () => {
   const { file } = useStaticQuery(query);
   return (
-  // <StyledSection id="professional">
-    <StyledStyledHero img={file.childImageSharp.fluid} radius="linear-gradient(rgba(38, 47, 47, 0.7), rgba(21, 22, 23, 0.7))" id="professional">
-      i
-      <Title SectionNumber="01" title="Professional" subtitle=" My Technical skills and Experienced development tools" />
-      <StyledDiv>
-        <StyledListContainer>
-          {skills.map((element, index) => (
-            <StyledSkill key={index}>{element.skill}</StyledSkill>
-          ))}
-        </StyledListContainer>
-      </StyledDiv>
-    </StyledStyledHero>
-  // </StyledSection>
+    <StyledSection id="professional">
+      <StyledStyledHero img={file.childImageSharp.fluid} radius="linear-gradient(rgba(38, 47, 47, 0.7), rgba(21, 22, 23, 0.7))">
+        i
+        <Title SectionNumber="01" title="Professional" subtitle=" My Technical skills and Experienced development tools" />
+        <StyledDiv>
+          <StyledListContainer>
+            {skills.map((element, index) => (
+              <StyledSkill key={index}>{element.skill}</StyledSkill>
+            ))}
+          </StyledListContainer>
+        </StyledDiv>
+      </StyledStyledHero>
+    </StyledSection>
   );
 };
 

@@ -16,8 +16,8 @@ const StyledContainer = styled.div`
 
 const StyledTitleContainer = styled.div`
 height:6rem;
-border-bottom: 1px solid var(--mainBlack);
 padding: 10px;
+margin: 30px;
 display:flex;
 justify-content: space-around;
 align-items: center
@@ -78,7 +78,7 @@ position: relative;
 
 const StyledExtraLink = styled.a`
   text-decoration:none;
-  color: var(--mainBlack);
+  color: var(--offWhite);
   ${''}
   bottom: 1px;
   right: 16px;

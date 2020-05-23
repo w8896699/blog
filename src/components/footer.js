@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styled from 'styled-components';
 import links from '../constants/links';
 import socialIcons from '../constants/social-icons';
@@ -21,7 +21,7 @@ const StyledFooter = styled.footer`
 //   list-style-type: none;
 // `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(AniLink)`
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -57,7 +57,7 @@ const Footer = () => (
     <div>
       {
             links.map((item, index) => (
-              <StyledLink key={index} to={item.path}>
+              <StyledLink fade key={index} to={item.path}>
                 {item.text}
               </StyledLink>
             ))

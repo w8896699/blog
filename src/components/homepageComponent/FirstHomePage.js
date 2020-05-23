@@ -21,9 +21,9 @@ const FirstHomePgHero = styled(StyledHero)`
     justify-content:center;
     align-items:center;
 `;
-const StyledLinks = styled(Link)`
+export const StyledLinks = styled(Link)`
   margin: 10px;
-  width: 20%;
+  width: 30%;
   @media screen and (max-width: 567px) {
     font-size: 0.7rem;
     font-weight:bolder;
@@ -51,6 +51,7 @@ const FirstHomePage = () => {
       img={file.childImageSharp.fluid}
       height="calc(100vh - 72px)"
       radius="linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))"
+      id="FirstHomepage"
     >
       <HomepageBanner title="This Billy's Everything " info="Let me show You more of Myself if you are my">
         <StyledLinkContainer>

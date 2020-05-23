@@ -7,6 +7,7 @@ import project from '../../constants/projects';
 import Title from '../Title';
 import Experiences from './Experiences';
 
+
 const query = graphql`
   query {
     file(relativePath: { eq: "backgrounds/snowMount.png" }) {
@@ -32,7 +33,19 @@ const StyledExperienceContainer = styled.div`
       margin-top: 3rem; 
     }
 `;
+const StyledDiv = styled.div`
+display: flex;
+    margin: 30px;
+    justify-content: center;`;
 
+const StyledLink = styled(Link)`
+    margin: 10px 40%;
+    width: 20%;
+    text-align: center;
+    @media screen and (min-width: 992px) {
+      margin: 8rem 40%; 
+    }
+`;
 const ExperiencePage = () => {
   const { file } = useStaticQuery(query);
   return (
@@ -54,6 +67,8 @@ const ExperiencePage = () => {
       <StyledExperienceContainer>
         <Title SectionNumber="03" title="Experience" subtitle="My Education and work experience so far" />
         <Experiences />
+        <StyledDiv> and more will happen in the future....</StyledDiv>
+        <StyledLink to="#FirstHomepage" className="btn-white">Back to top</StyledLink>
       </StyledExperienceContainer>
     </StyledHero>
 

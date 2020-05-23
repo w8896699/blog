@@ -3,15 +3,13 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import StyledHero from '../components/StyledHero';
-import Contact from '../components/contactComponent/ContactBox';
 
 const StyledStyledHero = styled(StyledHero)`
   color:var(--offWhite);
 `;
-
 const query = graphql`
   query {
-    file(relativePath: { eq: "backgrounds/connectBcg.jpeg" }) {
+    file(relativePath: { eq: "backgrounds/white-headphone.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid
@@ -20,8 +18,7 @@ const query = graphql`
     }
   }
 `;
-
-const contact = () => {
+const aboutMe = () => {
   const { file } = useStaticQuery(query);
   return (
     <Layout>
@@ -29,10 +26,11 @@ const contact = () => {
         height="50vh"
         img={file.childImageSharp.fluid}
       />
-
-      <Contact />
+      <div>
+        About me page
+      </div>
     </Layout>
   );
 };
 
-export default contact;
+export default aboutMe;

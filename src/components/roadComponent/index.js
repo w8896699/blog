@@ -7,7 +7,9 @@ import project from '../../constants/projects';
 import Title from '../Title';
 import Experiences from './Experiences';
 
-
+const StyledStyledHero = styled(StyledHero)`
+  color:var(--offWhite);
+`;
 const query = graphql`
   query {
     file(relativePath: { eq: "backgrounds/snowMount.png" }) {
@@ -49,7 +51,7 @@ const StyledLink = styled(Link)`
 const ExperiencePage = () => {
   const { file } = useStaticQuery(query);
   return (
-    <StyledHero
+    <StyledStyledHero
       height="400vh"
       img={file.childImageSharp.fluid}
       radius="linear-gradient(rgba(66, 63, 99, 0.88), rgba(45, 54, 70, 0.55)) 20% 30% "
@@ -70,7 +72,7 @@ const ExperiencePage = () => {
         <StyledDiv> and more will happen in the future....</StyledDiv>
         <StyledLink to="#FirstHomepage" className="btn-white">Back to top</StyledLink>
       </StyledExperienceContainer>
-    </StyledHero>
+    </StyledStyledHero>
 
 
   );

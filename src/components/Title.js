@@ -33,15 +33,19 @@ margin:1rem;
 `;
 
 const StyledTitle = styled.span`
-color:var(--offWhite);
+${(props) => (props.height ? props.height : '100vh')};
+color:${(props) => (props.black ? 'var(--mainBlack)' : 'var(--offWhite)')}
+
 `;
 
 
-const Title = ({ SectionNumber, title, subtitle }) => (
+const Title = ({
+  SectionNumber, title, subtitle, black,
+}) => (
   <StyledDiv>
     <StyledTitleWrapper>
       <StyledSectionNum>{SectionNumber}</StyledSectionNum>
-      <StyledTitle>{title}</StyledTitle>
+      <StyledTitle black={black}>{title}</StyledTitle>
     </StyledTitleWrapper>
     <StyledSubtitle>{subtitle}</StyledSubtitle>
   </StyledDiv>

@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styled from 'styled-components';
 import { IoIosOptions } from 'react-icons/io';
 import links from '../constants/links';
@@ -70,19 +71,19 @@ const StyledImgLogo = styled.img`
 const StyledNavLinks = styled.ul`
     list-style-type: none;
     transition: var(--mainTransition);
-    height: ${(props) => (!props.toggle ? '0' : '146px')};
+    height: ${(props) => (!props.toggle ? '0' : '175px')};
     overflow: hidden;
     @media screen and (min-width: 992px) {
       height: auto;
       display: flex;
-      flex: 0 400px;
+      flex: 0 600px;
     }
 `;
 
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(AniLink)`
     display: block;
-    padding: 1rem 1.25rem;
+    padding: 0.7rem 1.25rem;
     text-decoration: none;
     text-transform: capitalize;
     color: var(--mainBlack);
@@ -136,7 +137,7 @@ const Header = () => {
           {
             links.map((item, index) => (
               <li key={index}>
-                <StyledLink to={item.path}>
+                <StyledLink fade to={item.path}>
                   {item.text}
                 </StyledLink>
 

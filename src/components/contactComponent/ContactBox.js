@@ -77,7 +77,7 @@ const Contact = () => (
       black
     />
     <StyledCentreDiv>
-      <form>
+      <form action="https://formspree.io/627463434@qq.com" method="POST">
         <div>
           <StyledLabel htmlFor="name">Name</StyledLabel>
           <StyledInput type="text" name="name" id="name" placeholder="whats ur name" />

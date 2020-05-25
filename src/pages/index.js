@@ -6,8 +6,8 @@ import Layout from '../components/layout';
 // import Image from "../components/image"
 import SEO from '../components/seo';
 import FirstHomePage from '../components/homepageComponent/FirstHomePage';
-import ExperiencePage from '../components/roadComponent/index';
-import ProfessionalMe from '../components/aboutComponent/ProfessionalMe';
+import ExperiencePage from '../components/homepageComponent/roadComponent/index';
+import ProfessionalMe from '../components/homepageComponent/ProfessionalMe';
 
 
 const BlogLink = styled(Link)`

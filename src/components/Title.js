@@ -22,7 +22,7 @@ letter-spacing: 7px;
 
 `;
 const StyledSubtitle = styled(StyledInfo)`
-  color: white;
+  color:${(props) => (props.showSub ? 'var(--mainBlack)' : 'var(--offWhite)')}
 `;
 
 
@@ -40,14 +40,14 @@ color:${(props) => (props.black ? 'var(--mainBlack)' : 'var(--offWhite)')}
 
 
 const Title = ({
-  SectionNumber, title, subtitle, black,
+  SectionNumber, title, subtitle, black, showSub,
 }) => (
   <StyledDiv>
     <StyledTitleWrapper>
       <StyledSectionNum>{SectionNumber}</StyledSectionNum>
       <StyledTitle black={black}>{title}</StyledTitle>
     </StyledTitleWrapper>
-    <StyledSubtitle>{subtitle}</StyledSubtitle>
+    <StyledSubtitle showSub={showSub}>{subtitle}</StyledSubtitle>
   </StyledDiv>
 );
 

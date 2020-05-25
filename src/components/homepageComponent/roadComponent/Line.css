@@ -1,0 +1,77 @@
+/* apply a natural box layout model to all elements */
+/* 
+  .cf:before, .cf:after {
+      content: " ";
+      display: table;
+  }
+  .cf:after { 
+      clear: both; 
+    }
+  .cf { 
+      *zoom: 1;
+  } */
+  p {
+      margin:0 0 1em;
+      padding:10px;
+  }
+  .line {
+      position:relative;
+      width:80%;
+      margin:auto;
+      overflow:hidden;
+  }
+  .line:after {
+      content:" ";
+      width:2px;
+      background:var(--primaryColor);
+      position:absolute;
+      z-index:1;
+      top:20px; 
+      /* //顶上的长度 */
+      bottom:0;
+      left:50%;
+  }
+  .fl { 
+      float:left;
+      text-align: right;
+     }
+  .block {
+      width:50%;
+      position:relative;
+      padding:0 50px 0 0;
+      clear:both
+  }
+  .fr { 
+      float:right;
+      padding:0 0 0 50px; 
+    }
+  .circle {
+      width:15px;
+      height:15px;
+      border-radius:50%;
+      background:var(--primaryColor);
+      float:right;
+      margin-right:-58px;
+      margin-top:1em;
+      position:relative;
+      z-index:2;
+  }
+  .fr .circle {
+      float:left;
+      margin-left:-57px
+  }
+  /* .circle.first:before,.circle.last:before{
+      content:" ";
+      position:absolute;
+      width:4px;
+      left:50%;
+      margin:0 0 0 -2px;
+      bottom:100%;
+      height:99em;
+      z-index:3;
+  } */
+  .circle.last:before{
+      bottom:auto;
+      top:100%;	
+  }
+  

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "gatsby": "^2.21.22",
     "gatsby-background-image": "^1.1.1",
     "gatsby-cli": "^2.12.17",
@@ -15,6 +16,7 @@
     "gatsby-plugin-sharp": "^2.6.2",
     "gatsby-plugin-styled-components": "^3.3.1",
     "gatsby-plugin-transition-link": "^1.18.0",
+    "gatsby-source-contentful": "^2.3.12",
     "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-remark": "^2.8.7",
     "gatsby-transformer-sharp": "^2.5.2",

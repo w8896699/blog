@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import StyledHero from '../components/StyledHero';
+import AboutMe from '../components/aboutComponent/AboutMe.component';
 
 const StyledStyledHero = styled(StyledHero)`
   color:var(--offWhite);
@@ -26,9 +27,7 @@ const aboutMe = () => {
         height="50vh"
         img={file.childImageSharp.fluid}
       />
-      <div>
-        About me page
-      </div>
+      <AboutMe />
     </Layout>
   );
 };

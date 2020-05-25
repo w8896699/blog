@@ -71,7 +71,7 @@ const Contact = () => (
   <StyledSection>
 
     <Title
-      SectionNumber="02"
+      SectionNumber="04"
       title="Contact Me"
       subtitle="非诚勿扰啊~"
       black

@@ -20,6 +20,7 @@ const getBlogs = graphql`
           }
           updatedAt
           country
+          contentful_id
         }
       }
     }

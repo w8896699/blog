@@ -98,7 +98,7 @@ const ContentfulCard = ({ interest }) => {
     title, slug, updatedAt, picture, country,
   } = interest;
   const coverImage = picture[0].fluid;
-  console.log('hiahia', coverImage);
+
   return (
     <StyledArticle>
       <StyledImageContainer>

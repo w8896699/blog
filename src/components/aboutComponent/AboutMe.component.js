@@ -22,6 +22,7 @@ query {
           contentful_id
         }
         updatedAt
+        contentful_id
       }
     }
   }

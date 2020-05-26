@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
-import { FaCalendar, FaMap } from 'react-icons/fa';
+import { FaMap } from 'react-icons/fa';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const StyledArticle = styled.article`
+  max-height: 25rem;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   :hover {
@@ -13,6 +14,7 @@ const StyledArticle = styled.article`
 `;
 
 const StyledImage = styled(Image)`
+    max-height: 19.5rem;
  transition: var(--mainTransition);
 
 `;
@@ -93,9 +95,10 @@ const StyledDate = styled.div`
 `;
 const ContentfulCard = ({ interest }) => {
   const {
-    title, slug, updatedAt, picture, location,
+    title, slug, updatedAt, picture, country,
   } = interest;
   const coverImage = picture[0].fluid;
+  console.log('hiahia', coverImage);
   return (
     <StyledArticle>
       <StyledImageContainer>
@@ -105,11 +108,11 @@ const ContentfulCard = ({ interest }) => {
       <StyledFooter>
         <StyledTitle>{title}</StyledTitle>
         <StyledInfo>
-          {location
+          {country
           && (
           <StyledLocation>
             <StyledIcon />
-            {location}
+            {country}
           </StyledLocation>
           ) }
 

@@ -22,7 +22,7 @@ render() {
       <StyledCenterBox>
         {
           this.state.sortedBlog.map(({ node }) => (
-            <ContentfulCard key={node.contentful_id} interest={node} />
+            <ContentfulCard key={node.contentful_id} blog={node} currentSlug="blog" />
           ))
         }
       </StyledCenterBox>

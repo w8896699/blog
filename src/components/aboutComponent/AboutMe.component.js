@@ -65,7 +65,7 @@ const AboutMe = () => {
       <StyledCenterBox>
         {
           interests.map(({ node }) => (
-            <ContentfulCard key={node.contentful_id} interest={node} />
+            <ContentfulCard key={node.contentful_id} blog={node} currentSlug="aboutMe" />
           ))
         }
       </StyledCenterBox>

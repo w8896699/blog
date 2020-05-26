@@ -22,6 +22,7 @@ query {
           contentful_id
         }
         updatedAt
+        contentful_id
       }
     }
   }
@@ -29,11 +30,11 @@ query {
 
 `;
 
-const StyledTourSection = styled.section`
+export const StyledTourSection = styled.section`
   padding: 4rem 0;
   text-align: center;
 `;
-const StyledCenterBox = styled.div`
+export const StyledCenterBox = styled.div`
   width: 80vw;
   margin: 2rem auto;
   display: grid;
@@ -64,7 +65,7 @@ const AboutMe = () => {
       <StyledCenterBox>
         {
           interests.map(({ node }) => (
-            <ContentfulCard key={node.contentful_id} interest={node} />
+            <ContentfulCard key={node.contentful_id} blog={node} currentSlug="aboutMe" />
           ))
         }
       </StyledCenterBox>

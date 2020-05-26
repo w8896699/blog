@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
-import { FaCalendar, FaMap } from 'react-icons/fa';
+import { FaMap } from 'react-icons/fa';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { PropTypes } from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+
+const getDefaultImage = graphql`
+query {
+  file(relativePath: { eq: "defaultPic.JPG" }) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`;
 
 const StyledArticle = styled.article`
+  max-height: 25rem;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   :hover {
@@ -13,6 +28,7 @@ const StyledArticle = styled.article`
 `;
 
 const StyledImage = styled(Image)`
+    max-height: 19.5rem;
  transition: var(--mainTransition);
 
 `;
@@ -91,25 +107,40 @@ const StyledDate = styled.div`
   text-align: right;
 }
 `;
-const ContentfulCard = ({ interest }) => {
+const ContentfulCard = ({ blog, currentSlug }) => {
+  // const [displayImage, setDisplayImage] = useState(null); //用不了不知道为啥,
+  const defaultImageData = useStaticQuery(getDefaultImage);
+  const defaultImage = defaultImageData.file.childImageSharp.fluid;
   const {
-    title, slug, updatedAt, picture, location,
-  } = interest;
-  const coverImage = picture[0].fluid;
+    title, slug, updatedAt, picture, country,
+  } = blog;
+
+  let displayImage;
+  if (picture) {
+    displayImage = picture[0].fluid;
+  } else {
+    displayImage = defaultImage;
+  }
+
+  // if (picture) {
+  //   setDisplayImage(picture[0].fluid);
+  // } else {
+  //   setDisplayImage(defaultImage);
+  // }
   return (
     <StyledArticle>
       <StyledImageContainer>
-        <StyledImage id="img" fluid={coverImage} alt="Cover Picture" />
-        <StyledAniLink fade to={`/aboutMe/${slug}`}>Details</StyledAniLink>
+        <StyledImage id="img" fluid={displayImage} alt="Cover Picture" />
+        <StyledAniLink fade to={`/${currentSlug}/${slug}`}>Details</StyledAniLink>
       </StyledImageContainer>
       <StyledFooter>
         <StyledTitle>{title}</StyledTitle>
         <StyledInfo>
-          {location
+          {country
           && (
           <StyledLocation>
             <StyledIcon />
-            {location}
+            {country}
           </StyledLocation>
           ) }
 
@@ -120,6 +151,17 @@ const ContentfulCard = ({ interest }) => {
       </StyledFooter>
     </StyledArticle>
   );
+};
+
+
+ContentfulCard.prototype = {
+  blog: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    updatedAt: PropTypes.string.isRequired,
+    picture: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }),
 };
 
 export default ContentfulCard;

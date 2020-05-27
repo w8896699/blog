@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
       {
-        allMarkdownRemark {
+       allMarkdownRemark {
           edges {
             node {
               fields {
@@ -34,14 +34,32 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+      allContentfulBlog {
+          edges {
+            node {
+              slug
+            
+          }
+        }
+      }
       }
     `).then((result) => {
+    // console.log('haihia', result);
     result.data.allMarkdownRemark.edges.forEach(({ node }) => { // loop through every file we have and manually create new page using template
       createPage({
         path: node.fields.slug, // use slug as path
-        component: path.resolve(`./src/template/blog-post.js`),
+        component: path.resolve(`./src/template/markdown.template.js`),
         context: {
           slug: node.fields.slug,
+        },
+      });
+    });
+    result.data.allContentfulBlog.edges.forEach(({ node }) => {
+      createPage({
+        path: `blog/${node.slug}`, // use slug as path
+        component: path.resolve('./src/template/contentfulBlog.template.js'),
+        context: {
+          slug: node.slug,
         },
       });
     });

@@ -13,15 +13,14 @@ query {
         id
         slug
         title
+        date(formatString: "MMMM Do, YYYY")
         picture {
           fluid {
             ...GatsbyContentfulFluid_tracedSVG
           }
           description
           title
-          contentful_id
         }
-        updatedAt
         contentful_id
       }
     }

@@ -28,8 +28,8 @@ const StyledArticle = styled.article`
 `;
 
 const StyledImage = styled(Image)`
-    max-height: 19.5rem;
- transition: var(--mainTransition);
+  max-height: 19.5rem;
+  transition: var(--mainTransition);
 
 `;
 

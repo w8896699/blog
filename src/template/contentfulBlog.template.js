@@ -34,7 +34,9 @@ const StyledImagesContainer = styled.div`
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   margin-bottom: 2rem;
+  row-gap: 3rem;
   @media screen and (min-width: 1200px) {
+    
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     grid-column-gap: 50px;
 }
@@ -83,7 +85,7 @@ const contentfulBlog = ({ data }) => {
 
   return (
     <Layout>
-      <StyledHero img={mainPicture.fluid} height="50vh" />
+      <StyledHero img={mainPicture.fluid} height="60vh" />
       <StyledSection>
         <StyledCentreDiv>
           <StyledImagesContainer>

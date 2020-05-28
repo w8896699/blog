@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { FaMap } from 'react-icons/fa';
 import Img from 'gatsby-image';
 import AniLink from 'gatsby-plugin-transition-link';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'; // https://www.contentful.com/developers/docs/tutorials/general/rich-text-and-gatsby/
-import styles from './single-blog.module.css';
 import Layout from '../components/layout';
 import StyledHero from '../components/StyledHero';
 

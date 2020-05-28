@@ -11,16 +11,14 @@ const getBlogs = graphql`
           id
           slug
           title
+          date(formatString: "MMMM D, YYYY")
           picture {
             fluid {
                 ...GatsbyContentfulFluid_tracedSVG
             }
             title
-            contentful_id
           }
-          updatedAt
           country
-          contentful_id
         }
       }
     }

@@ -34,7 +34,7 @@ const StyledLinkContainer = styled.div`
   display:flex;
   justify-content: space-around
 `;
-export default ({ data }) => (
+export default () => (
   <Layout>
     <SEO title="Home" />
     <FirstHomePage />
@@ -45,28 +45,28 @@ export default ({ data }) => (
 );
 
 
-export const query = graphql`
-  query{
-    allMarkdownRemark(sort:{ fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date
-          }
-          fields{
-            slug
-          }
-          excerpt
-          
-        }
-      }
-    }
-  }
-  
-`;
+// export const query = graphql`
+//   query{
+//     allMarkdownRemark(sort:{ fields: [frontmatter___date], order: DESC}) {
+//       totalCount
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             date
+//           }
+//           fields{
+//             slug
+//           }
+//           excerpt
+
+//         }
+//       }
+//     }
+//   }
+
+// `;
 
 // {
 //   data.allMarkdownRemark.edges.map(({ node }) => (

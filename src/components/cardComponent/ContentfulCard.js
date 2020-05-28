@@ -28,8 +28,8 @@ const StyledArticle = styled.article`
 `;
 
 const StyledImage = styled(Image)`
-    max-height: 19.5rem;
- transition: var(--mainTransition);
+  max-height: 19.5rem;
+  transition: var(--mainTransition);
 
 `;
 
@@ -102,6 +102,7 @@ const StyledLocation = styled.h5`
 `;
 
 const StyledDate = styled.div`
+  font-family:'Patrick Hand';
   color: var(--darkGrey);
   text-transform: uppercase;
   text-align: right;
@@ -112,7 +113,7 @@ const ContentfulCard = ({ blog, currentSlug }) => {
   const defaultImageData = useStaticQuery(getDefaultImage);
   const defaultImage = defaultImageData.file.childImageSharp.fluid;
   const {
-    title, slug, updatedAt, picture, country,
+    title, slug, date, picture, country,
   } = blog;
 
   let displayImage;
@@ -131,7 +132,7 @@ const ContentfulCard = ({ blog, currentSlug }) => {
     <StyledArticle>
       <StyledImageContainer>
         <StyledImage id="img" fluid={displayImage} alt="Cover Picture" />
-        <StyledAniLink fade to={`/${currentSlug}/${slug}`}>Details</StyledAniLink>
+        <StyledAniLink fade to={`/${currentSlug}/${slug}`}>Read More</StyledAniLink>
       </StyledImageContainer>
       <StyledFooter>
         <StyledTitle>{title}</StyledTitle>
@@ -145,7 +146,7 @@ const ContentfulCard = ({ blog, currentSlug }) => {
           ) }
 
           <StyledDate>
-            {updatedAt.slice(0, 10)}
+            {date}
           </StyledDate>
         </StyledInfo>
       </StyledFooter>

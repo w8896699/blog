@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { StyledTourSection, StyledCenterBox } from '../aboutComponent/AboutMe.component';
+import { StyledTourSection, StyledCenterBox } from '../aboutComponent/Interest.component';
 import ContentfulCard from '../cardComponent/ContentfulCard';
 
 export default class BlogList extends Component {

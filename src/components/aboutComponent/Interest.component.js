@@ -48,7 +48,7 @@ export const StyledCenterBox = styled.div`
     max-width: 1170px;
 }
 `;
-const AboutMe = () => {
+const Interest = () => {
   const response = useStaticQuery(getInterest);
   const interests = response.interest.edges;
   // console.log(interests);
@@ -56,7 +56,7 @@ const AboutMe = () => {
     <StyledTourSection>
       <Title
         SectionNumber="02"
-        title="About Me"
+        title="Interests"
         subtitle="Things that I like"
         black
         showSub
@@ -64,7 +64,7 @@ const AboutMe = () => {
       <StyledCenterBox>
         {
           interests.map(({ node }) => (
-            <ContentfulCard key={node.contentful_id} blog={node} currentSlug="aboutMe" />
+            <ContentfulCard key={node.contentful_id} blog={node} currentSlug="interest" />
           ))
         }
       </StyledCenterBox>
@@ -72,4 +72,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default Interest;

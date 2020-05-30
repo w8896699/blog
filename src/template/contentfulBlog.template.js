@@ -108,7 +108,7 @@ const contentfulBlog = ({ data }) => {
           <StyledLongText>
             {longText}
           </StyledLongText>
-          <AniLink fade="true" to="/aboutMe" className="btn-primary">Go Back</AniLink>
+          <AniLink fade="true" to="/blog" className="btn-primary">Go Back</AniLink>
         </StyledCentreDiv>
       </StyledSection>
 

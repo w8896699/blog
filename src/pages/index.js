@@ -7,14 +7,14 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import FirstHomePage from '../components/homepageComponent/FirstHomePage';
 import ExperiencePage from '../components/homepageComponent/roadComponent/index';
-import ProfessionalMe from '../components/homepageComponent/ProfessionalMe';
+import AboutMe from '../components/homepageComponent/AboutMe';
 
 
 export default () => (
   <Layout>
     <SEO title="Home" />
     <FirstHomePage />
-    <ProfessionalMe />
+    <AboutMe />
     <ExperiencePage />
 
   </Layout>

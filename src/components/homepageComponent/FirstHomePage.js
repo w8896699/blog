@@ -55,8 +55,8 @@ const FirstHomePage = () => {
     >
       <HomepageBanner title="This Billy's Everything " info="Let me show You more of Myself if you are my">
         <StyledLinkContainer>
-          <StyledLinks to="#professional" className="btn-white"> Colleague</StyledLinks>
-          <StyledLinks to="/aboutMe/" className="btn-white"> Friend</StyledLinks>
+          <StyledLinks to="#AboutMe" className="btn-white"> Colleague</StyledLinks>
+          <StyledLinks to="/interest/" className="btn-white"> Friend</StyledLinks>
         </StyledLinkContainer>
       </HomepageBanner>
     </FirstHomePgHero>

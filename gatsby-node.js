@@ -64,7 +64,7 @@ exports.createPages = ({ graphql, actions }) => {
     });
     result.data.allContentfulInterest.edges.forEach(({ node }) => {
       createPage({
-        path: `aboutMe/${node.slug}`, // use slug as path
+        path: `interest/${node.slug}`, // use slug as path
         component: path.resolve('./src/template/contentfulInterest.template.js'),
         context: {
           slug: node.slug,

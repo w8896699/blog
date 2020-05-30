@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import StyledHero from '../components/StyledHero';
-import AboutMe from '../components/aboutComponent/AboutMe.component';
+import Interest from '../components/aboutComponent/Interest.component';
 
 const StyledStyledHero = styled(StyledHero)`
   color:var(--offWhite);
@@ -19,7 +19,7 @@ const query = graphql`
     }
   }
 `;
-const aboutMe = () => {
+const interest = () => {
   const { file } = useStaticQuery(query);
   return (
     <Layout>
@@ -27,9 +27,9 @@ const aboutMe = () => {
         height="50vh"
         img={file.childImageSharp.fluid}
       />
-      <AboutMe />
+      <Interest />
     </Layout>
   );
 };
 
-export default aboutMe;
+export default interest;

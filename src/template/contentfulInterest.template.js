@@ -56,7 +56,7 @@ const contentfulInterest = ({ data }) => {
           </h4>
           <h4>{subtitle}</h4>
           <StyledPost>{ContentfulRichText(json)}</StyledPost>
-          <AniLink fade="true" to="/aboutMe" className="btn-primary">Go Back</AniLink>
+          <AniLink fade="true" to="/interest" className="btn-primary">Go Back</AniLink>
         </StyledCentreDiv>
       </StyledSection>
     </Layout>

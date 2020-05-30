@@ -10,30 +10,6 @@ import ExperiencePage from '../components/homepageComponent/roadComponent/index'
 import ProfessionalMe from '../components/homepageComponent/ProfessionalMe';
 
 
-const BlogLink = styled(Link)`
-  text-decoration: none;
-  font-weight: 400;
-  text-transform: capitalize;
-  padding: 0 4px;
-  margin: 0 2px;
-
-`;
-const BlogTitle = styled.h3`
-  margin-bottom: 20px;
-  &:hover {
-    color: #1dcaff;
-  }
-`;
-
-const StyledLinks = styled(Link)`
-  margin: 10px;
-  width: 20%;
-`;
-
-const StyledLinkContainer = styled.div`
-  display:flex;
-  justify-content: space-around
-`;
 export default () => (
   <Layout>
     <SEO title="Home" />

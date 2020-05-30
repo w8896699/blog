@@ -114,4 +114,7 @@ main {
   html {
     font-size: 100%;
   }
+  .btn-primary {
+    padding: 0.9rem 0.5rem;
+  }
 }

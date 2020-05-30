@@ -42,9 +42,10 @@ display: flex;
 
 const StyledLink = styled(Link)`
     margin: 10px 40%;
-    width: 20%;
+    
     text-align: center;
     @media screen and (min-width: 992px) {
+      width: 20%;
       margin: 8rem 40%; 
     }
 `;

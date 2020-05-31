@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { element } from 'prop-types';
+import Typical from 'react-typical';
 import styled from 'styled-components';
 import Title from '../Title';
 import ContentfulCard from '../cardComponent/ContentfulCard';
@@ -60,6 +60,17 @@ const Interest = () => {
         subtitle="Things that I like"
         black
         showSub
+      />
+      <Typical
+        steps={['I Like Cooking ',
+          1500, 'I Like Eating ',
+          1500, 'I Like Hiking ',
+          1500, 'I Like Fishing ',
+          1500, 'I Like Cats ',
+          1500, 'I Like Gaming ',
+          1500]}
+        loop={Infinity}
+        wrapper="span"
       />
       <StyledCenterBox>
         {

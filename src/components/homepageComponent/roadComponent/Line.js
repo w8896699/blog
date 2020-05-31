@@ -12,7 +12,7 @@ const Line = () => (
       <div className="cf">
         {
           experienceConstants.map((element, index) => (
-            <div className={`${(index % 2 === 0) ? 'block fl' : 'block fr'}`}>
+            <div key={element.id} className={`${(index % 2 === 0) ? 'block fl' : 'block fr'}`}>
 
               <Experience experience={element} />
             </div>

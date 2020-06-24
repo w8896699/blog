@@ -105,8 +105,8 @@ const contentfulBlog = ({ data }) => {
             {' '}
             {date}
           </h4>
-          <StyledLongText>
-            {longText}
+          <StyledLongText dangerouslySetInnerHTML={{ __html: longText }}>
+            {/* {longText} */}
           </StyledLongText>
           <AniLink fade="true" to="/blog" className="btn-primary">Go Back</AniLink>
         </StyledCentreDiv>

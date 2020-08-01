@@ -53,7 +53,7 @@ const FirstHomePage = () => {
       radius="linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))"
       id="FirstHomepage"
     >
-      <HomepageBanner title="This Billy's Everything " info="Let me show You more of Myself if you are my">
+      <HomepageBanner title="All About Me " info="Let me show You more of Myself if you are my">
         <StyledLinkContainer>
           <StyledLinks to="#AboutMe" className="btn-white"> Colleague</StyledLinks>
           <StyledLinks to="/interest/" className="btn-white"> Friend</StyledLinks>

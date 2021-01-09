@@ -23,7 +23,6 @@ const FirstHomePgHero = styled(StyledHero)`
 `;
 export const StyledLinks = styled(Link)`
   margin: 10px;
-  width: 30%;
   @media screen and (max-width: 567px) {
     font-size: 0.7rem;
     font-weight:bolder;

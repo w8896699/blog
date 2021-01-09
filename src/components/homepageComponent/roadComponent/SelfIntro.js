@@ -24,11 +24,11 @@ const SelfIntroSection = (props) => {
           I already have 16 month work experience.
           <Typist.Delay ms={1800} />
           <br />
-          Currently, because of COVID-19, I am staying at home and doing some small project to keep my skills sharp.  &nbsp;
+          Currently, because of COVID-19, I am staying at home and working for Canada Drives as a developer.  &nbsp;
           <Typist.Delay ms={1800} />
           But,
           <Typist.Backspace count={4} delay={500} />
-          BUT!! I am keep hunting for a job!
+          BUT!! I still like to show off my skills!!
           <Typist.Delay ms={1000} />
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

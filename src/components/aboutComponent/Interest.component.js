@@ -15,8 +15,8 @@ query {
         title
         date(formatString: "MMMM Do, YYYY")
         picture {
-          fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+          fluid(maxWidth: 600, quality: 85) {
+            ...GatsbyContentfulFluid_withWebp
           }
           description
           title

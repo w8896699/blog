@@ -13,8 +13,8 @@ const getBlogs = graphql`
           title
           date(formatString: "MMMM D, YYYY")
           picture {
-            fluid {
-                ...GatsbyContentfulFluid_tracedSVG
+            fluid(maxWidth: 600, quality: 85) {
+                ...GatsbyContentfulFluid_withWebp
             }
             title
           }

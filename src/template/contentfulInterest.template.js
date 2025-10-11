@@ -21,7 +21,6 @@ const StyledCentreDiv = styled.div`
 
 const StyledPost = styled.article`
 margin: 2rem 0;
-font-size: 95px;
 `;
 const contentfulInterest = ({ data }) => {
   const {
